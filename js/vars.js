@@ -1,0 +1,17 @@
+var strings = {};
+strings["console"] = "con_enable \"1\"";
+strings["range"] = "dota_disable_range_finder \"0\"";
+strings["shake"] = "dota_screen_shake \"0\"";
+strings["selfcast"] = "dota_ability_quick_cast \"1\"";
+strings["minimapsize"] = "dota_minimap_hero_size \"$\"";
+strings["flyheight"] = "dota_unit_fly_bonus_height \"$\"";
+strings["playernames"] = "dota_always_show_player_names \"1\"";
+strings["killcam"] = "dota_killcam_show \"1\"";
+strings["hp"] = "dota_health_per_vertical_marker \"$\"";
+strings["bind"] = "bind \"$\"";
+strings["netgraph"] = "net_graph \"1\"";
+strings["netwide"] = "net_graphinsetright \"$\"";
+strings["nethi"] = "net_graphinsetbottom \"$\"";
+strings["chat"] = "chat_join \"$\"";
+strings["deny"] = "dota_force_right_click_attack \"1\"";
+strings[""] = "";

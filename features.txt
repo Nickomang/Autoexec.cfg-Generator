@@ -1,0 +1,47 @@
+Implemented 
+===========
+- Basic functionality
+- Adding binds thing (enter key, dropdown, if numbers display number box)
+
+
+
+Planned
+========
+- Changelog
+- Adding more commands in general
+- Adding popular cfgs (arteezy, etc) (do this by checking appropriate checks and just plain adding the rest)
+
+
+Possible?
+=========
+- Linking changelog to github (dynamic changelog?)
+- jQuery accordian thing if too many commands
+
+NOTES
+======
+Should post this on reddit, see what people think is important enough to be included
+strawpoll maybe?
+
+Button to add is easier, but maxx said that having a dedicated add button is better UI. I kind of agree, not sure waht to do
+
+
+COMMANDS
+========
+  -console
+  -chat
+  -range finder
+  -screen shake
+  -right click deny
+  -minimap hero size
+multiple orders
+  -always show names
+autoattack
+  -flying height
+hp bar stuff
+killcam
+  -hp bar segmentation and opacity stuff
+no zoom
+volume stuff
+  -netgraph stuff
+  -binds
+

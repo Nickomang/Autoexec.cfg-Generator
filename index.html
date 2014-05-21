@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/custom.css">
+
+    <script src="js/jquery.js"></script>
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="js/vars.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Autoexec.cfg Builder</h1>
+            <p>
+                Welcome to Nick Oman's autoexec.cfg builder for Dota 2. Either choose from one of the presets, use it 
+                as a starting point and customize from there, or build one from scratch. If you are confused as to what a certain option is for, check the 
+                description underneath, or you can google it if you need even more detail.
+            </p>
+            <p>
+                This is being actively developed, and 
+                if you have any suggestions you can <a href="https://github.com/Nickomang">fork me on github</a>, <a href="http://www.reddit.com/message/compose/?to=Nickomang">message me on reddit</a> or <a href="mailto:nickomang@gmail.com">send me an email</a>.
+            </p>
+            <h2>What is an autoexec.cfg?</h2>
+            <p>
+                autoexec.cfg is a config file that allows you to save certain presets that you might find useful inside of Dota 2. Some more popular ones, for example, 
+                include the ability to bind a key to certain camera positons, or change the size of hero pointers on the minimap. There are a lot of options, so try
+                different configurations and see what works best for you.
+            </p>
+            <h2>How do I use it?</h2>
+            <p>
+                In order to use your newly made autoexec.cfg file, you must first save it as a config file. To do so, copy the text outputted below into notepad, sublime text, or another
+                simple plaintext editor. Save it as a .cfg file, and you should be good to go. If you're still having trouble, you can try following the instructions <a href="http://dev.dota2.com/showthread.php?t=44560HERE">here</a>. You must then put it in the \Steam\steamapps\common\dota 2 beta\dota\cfg folder. If you can't find it, google around, there's plenty of help on forums and such.
+            </p>
+            <h2>This editor is missing things I want!</h2>
+            <p>
+                This isn't meant to be a catchall creator for every option possible with autoexec.cfg's. It's meant to be a good starting point for people who want very basic settings or a framework to build off of. There's plenty of awesome stuff you can do, check out reddit, teamliquid, or some of the many dota forums for more information. The possibilities are endless, so if you really want to get a personal
+                cfg, just do some research and write one yourself.
+            </p>
+            <h2>What's New</h2>
+            <p>
+                0.0.0 Actually making the thing.
+                For more see the entire <a href="changelog.html">changelog</a>
+            </p>
+
+        </div>
+        <hr>
+        <div class="options">
+            <h1>Presets</h1>
+            <h1>Basics</h1>
+                <input type="checkbox" id="console"/>
+                <label for="console"><span></span>Console</label>
+                <br>
+                <p class="info">// Enables console</p>
+                <br>
+                <input type="checkbox" id="range"/>
+                <label for="range"><span></span>Range Finder</label>
+                <br>
+                <p class="info">// When spell is selected, range finder is shown</p>
+                <br>
+                <input type="checkbox" id="shake"/>
+                <label for="shake"><span></span>No Screen Shake</label>
+                <br>
+                <p class="info">// Screen will no longer shake when certain are cast what if this is too long</p>
+                <br>
+                <input type="checkbox" id="selfcast"/>
+                <label for="selfcast"><span></span>Selfcast</label>
+                <br>
+                <p class="info">// Enables doubletapping to selfcast</p>
+                <br>
+                <input type="checkbox" id="playernames"/>
+                <label for="playernames"><span></span>Show Player Names</label>
+                <br>
+                <p class="info">// Always show player names</p>
+                <br>
+                <input type="checkbox" id="killcam"/>
+                <label for="killcam"><span></span>Enable Killcam</label>
+                <br>
+                <p class="info">// Show information window upon death</p>
+                <br>
+                <input type="checkbox" id="deny"/>
+                <label for="deny"><span></span>Right Click Deny</label>
+                <br>
+                <p class="info">// Enables the ability to use right-click to deny allied units</p>
+                <br>
+            <h1>NetGraph</h1>
+                <input type="checkbox" id="netgraph"/>
+                <label for="netgraph"><span></span>Enable Netgraph</label>
+                <br>
+                <button for="netwide">Netgraph Width</button>
+                <input type="text" id="netwide"/>
+                <button for="netwide" class="remove">Remove</button> 
+                <p class="info">// Sets netgraph horizontal placement, 600 is below the scoreboard</p>
+                <br> 
+                <button for="nethi">Netgraph Height</button>
+                <input type="text" id="nethi"/>
+                <button for="nethi" class="remove">Remove</button> 
+                <p class="info">// Sets netgraph vertical placement, 100 is below the scoreboard</p>
+                <br> 
+            <h1>Chat</h1>
+                <button for="chat">Chat Channels</button> 
+                <input type="text" id="chat"/>
+                <button for="chat" class="remove">Remove</button> 
+                <p class="info">// Chat channels you want to join by default.</p>
+                <br>
+            <h1>Values</h1>
+                <!-- <input type="text" id="minimapsize"/>
+                <button for="minimapsize">Add</button>
+                <button for="minimapsize" class="remove">Remove</button> 
+                <br> -->
+                <button for="minimapsize">Minimap Hero Size</button> 
+                <input type="text" id="minimapsize"/>
+                <button for="minimapsize" class="remove">Remove</button> 
+                <br>
+                <p class="info">// Changes the size of heroes on the minimap (Default: 600)</p>
+                <br>
+                <button for="flyheight">Flying Unit Height</button> 
+                <input type="text" id="flyheight"/>
+                <button for="flyheight" class="remove">Remove</button>
+                <br>
+                <p class="info">// Changes height of flying units  (Default: 150)</p>
+                <br>
+                <button for="hp">HP per Vertical Unit Marker</button> 
+                <input type="text" id="hp"/>
+                <button for="hp" class="remove">Remove</button>
+                <br>
+                <p class="info">// Amount of HP per vertical segment in lifebar (Default: 250)</p>
+            <h1>Binds</h1>
+                <input type="text" id="bind"/>
+                <button for="bind" class="bind">Add</button>
+                <button for="bind" class="remove">Remove</button> 
+                <p>
+                    To bind any key to any function, simply add bind "yourkey" before any function, for example this:
+                    <code>bind "F10" "dota_killcam_show "1"</code>
+                    causes the F10 key to enable the killcam.
+                </p>
+        </div>
+        <div class="output">
+            <h2>your autoexec.cfg</h2>
+        </div>
+    </div>
+</body>
+<script src="js/checkbox.js"></script>
+<script src="js/blob.js"></script>
+</html>

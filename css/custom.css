@@ -1,0 +1,91 @@
+body {
+	background: #f5f5f5;
+	font-family: monospace;
+	font-size: 14px;
+	color: #333333;
+}
+button {
+	outline: 0;
+}
+p {
+	color: #aeaeae;
+	margin-left: 15px;
+	font-size: 14px;
+}
+
+p.info {
+	display: inline;
+}
+.options code {
+	color: black;
+}
+.header a {
+	text-decoration: none;
+	color: #428bca;
+}
+.header a:hover {
+	text-decoration: underline;
+	color: #3178b5;
+}
+.container {
+	max-width: 670px;
+	margin: 2em auto;
+	/*background: #fff;*/
+}
+.container .options {
+	margin-bottom: 3em;
+	line-height: 1.4em;
+	font-size: 16px;
+	text-align: left;
+	margin-left: 10px;
+}
+.container .options h1 {
+	margin-top: 10px;
+	font-size: 18px;
+	margin-left: -10px;
+}
+.output {
+	text-align: left;
+	padding: 1em 4em;
+	padding-top: .05em;
+	padding-left: 1em;
+	padding-right: 1em;
+	background: #fff;
+}
+input[type="checkbox"] {
+    display:none;
+}
+input[type="checkbox"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    background:url(../img/sprite.png) left top no-repeat;
+    cursor:pointer;
+}
+input[type="checkbox"]:checked + label span {
+    background:url(../img/sprite.png) -19px top no-repeat;
+}
+input[type="text"] {
+	width: 50px;
+
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+button {
+	font-family: monospace;
+	padding: 0px 5px;
+	margin: 0px;
+	background-color: #dfdfdf;
+	line-height: 1.4em;
+	font-size: 14px;
+	border: none;
+	text-decoration: none;
+	/*margin-top: 10px;*/
+}

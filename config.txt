@@ -1,0 +1,138 @@
+// By tauon
+// 15/5/12, v.1.0
+
+// Use launch conditions: -console -novid
+// -console enables console and -novid disables intro video
+
+
+con_enable "1"	 // Enables the console
+
+// List of channels you want to be added to by default
+chat_join "teamliquid"	 // Join Teamliquid chat channel 
+chat_join "boredaussie"
+chat_join "Australia"
+
+// BASIC SETTINGS
+
+dota_screen_shake "0"	 // Screen will no longer shake when certain are cast
+dota_force_right_click_attack "1" // Can now right-click to deny
+dota_disable_range_finder "0" // When spell is selected, range finder is shown
+dota_minimap_hero_size "700" // Increases the size of heroes on the minimap
+dota_player_multipler_orders "1"	// Hold ctrl to give order to all units
+dota_player_units_auto_attack "0"	// Disables hero autoattack
+dota_unit_fly_bonus_height "10"	 // Decreases height of flying units significantly (Default: 150)
+dota_always_show_player_names "1"	// Always show player names
+dota_ability_quick_cast "1"	 // Doubletapping to selfcast
+
+dota_sf_game_end_delay 0	 // Make results appear immediately after game ends
+
+// dota_minimap_simple_colors 1	 // Makes minimap colour scheme similar to WC3/Dota 1 (to turn off, set to 0)
+// dota_ability_quick_cast 1	 // Double tapping item/ability applies it to yourself (to turn off, set to 0)
+
+// Health Bar, makes hp changes instantaneous if set to 0 without quotations
+// dota_health_hurt_decay_time_max "0.4"	// Default is 0.8
+// dota_health_hurt_decay_time_min "0.15"	// Default is 0.3
+// dota_health_hurt_delay "0.05"	 // Default is 0.1
+// dota_pain_decay "0.4"	 // Default is 0.8
+// dota_pain_factor "1.5"	 // Default is 3
+// dota_pain_multiplier "0.4"	 // Default is 0.8
+
+
+// dota_killcam_show 1	 // Enables information updon death (Default: 0)
+// dota_health_per_vertical_marker "250" // Health segmenting in the lifebar (default 250)
+// dota_health_marker_major_alpha "255"	// Opacity major healthbar divider (default 255, 0=invisible 255=opaque)
+// dota_health_marker_minor_alpha "128"	// Opacity minor healthbar divider (default 128, 0=invisible 255=opaque)
+// dota_hud_healthbar_number "1"	 // Health number above the lifebar on	 (default 1)
+// dota_minimap_misclick_time "0.4" // Threshold delay to accept minimap clicks (default 0.2)
+// dota_camera_accelerate "10" // Decelerating map scroll (50 = insta stop, 1 = smooth slowdown, vanilla DotA would be 50)
+// dota_camera_speed "3682"	 // Scrolling speed (vanilla DotA-like is 6500, default 3000)
+// dota_camera_disable_zoom "1"	 // Disables mousewheel zoom	 (default 1)
+
+// dota_unit_multiple_selection "1"	// ???
+
+// SOUND
+// volume "0.05"	 // Volume adjusted for teamspeak
+// snd_musicvolume "0"	 // Ingame music volume (Min "0" Max "1.0")
+
+
+// Choose lobby avatar
+// dota_set_avatar 0	 //- Default
+// dota_set_avatar 1	 //- Crystal Maiden
+// dota_set_avatar 2	 //- Kunkka
+// dota_set_avatar 3	 //- Faceless Void
+dota_set_avatar 4	 //- Furion
+// dota_set_avatar 5	 //- Yurnero
+// dota_set_avatar 6	 //- Bloodseeker
+// dota_set_avatar 7	 //- Lich
+// dota_set_avatar 8	 //- Axe
+// dota_set_avatar 9	 //- Pudge
+// dota_set_avatar 10	 //- Puck
+
+// Frame rate
+fps_max "60" // Halves the default fps
+mat_vsync "1" // Stops screen refresh rate exceeding refresh rate of monitor
+mat_triplebuffered "1"	 // Enable with vsync if fps is less than 60	 (0 Disables, 1 Enables)
+
+// FOR LOW SPEC PCs
+// dota_cheap_water 1
+// cl_globallight_shadow_mode 0
+// r_deferred_height_fog 0
+// r_deferred_simple_light 1
+// r_screenspace_aa 0
+// mat_vsync 0 // (Need to delete mat_vsync "1" line)
+
+// PING
+
+net_graphinsetbottom "418"	 // 100 to place below scoreboard
+net_graphinsetright "-80"	 // 600 to place below scoreboard
+net_graphproportionalfont "0"	 // Resize font
+net_graph "1"
+alias "showgraph" "showgraph_off"
+alias "showgraph_on" "net_graph 1; alias showgraph showgraph_off"
+alias "showgraph_off" "net_graph 0; alias showgraph showgraph_on"
+bind "F10" "showgraph"
+
+
+// INTERNET CONNECTION
+
+rate "80000"	 // Total amount of bandwidth Dota 2 may use	 (40000)
+cl_updaterate "40"	 // Amount of updates recieved from server per second (20)
+cl_cmdrate "40"	 // Amount of updates sent to server per second (20)
+
+cl_interp "0"	 // cl_interp 1 / cl_updaterate * (cl_interp_ratio )	 (Default 0.1)
+cl_interp_ratio "1"	 // Multiplies final result of cl_interp	 (Default 2)
+cl_smoothtime "0.01"	 // When errors occur smooth display over X time, 0 Disables	(Default 0.1)
+
+// SCRIPTS
+
+// Shows scoreboard and APM in the console
+alias "+showboard" "+showscores;dota_apm" 
+alias "-showboard" "-showscores;"
+bind "\" "+showboard"	 // Show Netgraph and APM
+
+// Shows 1025 rangeunits, the proximity range to be revealed while smoked, 1300 = lvl4 pudge hook range, 700 = tower range, 1150 = dagger range
+alias "+range" "dota_range_display 1025" 
+alias "-range" "dota_range_display 0"
+bind "]" "+range"	 // Show Range Radius
+
+
+// BINDINGS
+
+bind "u" "dota_learn_stats"
+bind "F8" "exec autoexec.cfg"	 // Executes this autoexec again
+bind "F11" "toggleconsole" // Open Console
+dota_shop_force_hotkeys 1	 // Adds hotkeys to shop (to turn off the set 0)
+bind "." "toggleshoppanel"	 // Open Shop
+
+// Chat Bindings
+bind "p" "say_team miss top"
+bind "," "say_team miss bottom"
+bind "l" "say_team miss mid"
+bind "k" "say_team re"
+bind "n" "say_team b"
+bind "m" "say_team care"
+
+// `Useful' console commands:
+// dota_apm	 Retrieve average APM for last game
+// net_graph #	 # = 0, 1, 2, 3, 4
+// cl_showfps	 check frame rate
